@@ -1,5 +1,5 @@
-fn fn2(mut n: i16) {
-    n = 4;
+fn fn2(n: &mut i16) {
+    *n = 4;
     println!("Hi {}", n);
 }
 
@@ -8,6 +8,7 @@ fn main() {
     for i in 1..10 {
         println!("Hi!");
     }
-    fn2(n);
+    println!("Hi {}", n);
+    fn2(&mut n);
     println!("Hi {}", n);
 }

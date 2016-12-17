@@ -1,2 +1,3 @@
 all:
-	rustc hello.rs
+	cargo build
+	cargo run

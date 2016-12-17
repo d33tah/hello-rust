@@ -1,5 +1,5 @@
-fn fn2() {
-    println!("Hi 2");
+fn fn2(n: i16) {
+    println!("Hi {}", n);
 }
 
 fn main() {
@@ -7,5 +7,5 @@ fn main() {
     for i in 1..10 {
         println!("Hi!");
     }
-    fn2();
+    fn2(n);
 }

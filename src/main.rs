@@ -1,14 +1,14 @@
+use std::io::{self, Write};
+
 fn fn2(n: &mut i16) {
     *n = 4;
     println!("Hi {}", n);
 }
 
 fn main() {
-    let mut n = 3;
-    for i in 1..10 {
-        println!("Hi!");
-    }
-    println!("Hi {}", n);
-    fn2(&mut n);
-    println!("Hi {}", n);
+    io::stdout().write(b"Please enter your name: ");
+    io::stdout().flush();
+    let mut name = String::new();
+    io::stdin().read_line(&mut name);
+    println!("Hello, {}!", name);
 }
